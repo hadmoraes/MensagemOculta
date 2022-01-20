@@ -16,18 +16,21 @@
             <h2 class="title">Codificador/Decodificador</h2>
 
             <div class="entrada">
-                <label for="mensagem">Digite a mensagem que deseja codificar/decodificar:</label> <br>
+                <label for="mensagem">Digite a mensagem que deseja codificar/decodificar:</label> 
                 <input type="text" id="mensagem" name="mensagem">
             </div>
 
             <div class="cifraEscolha">
-                <label for="escolhaCifra">Escolha a cifra que deseja utilizar:</label> <br>
-                <select id="escolhaCifra" name="escolhaCifra">
-                    <option value="cesar">Cifra de César</option>
-                    <option value="base64">Base64</option>
-                </select>
-                <input type="submit">
-            </div>
+                <label for="escolhaCifra">Escolha a cifra que deseja utilizar:</label>
+                <div class="caixaSelecao">
+                    <select id="escolhaCifra" name="escolhaCifra">
+                        <option value="escolha">Escolha as opções</option>
+                        <option value="cesar">Cifra de César</option>
+                        <option value="base64">Base64</option>
+                    </select>
+                    <input type="submit" id="botaoCifra">
+                </div>
+            </div> <br>
 
             <div class="entradasRadiais">
                 <div class="codificar">
