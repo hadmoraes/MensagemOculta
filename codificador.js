@@ -30,3 +30,7 @@ codificar.addEventListener('click',function(){
 decodificar.addEventListener('click',function(){
     btn.innerText = 'Decodificar Mensagem!';
 });
+
+btn.addEventListener('click', function(event){
+    event.preventDefault();
+})

@@ -73,13 +73,14 @@ select{
     font-weight: bold;
     font-size: x-large;
     text-shadow: #aace88;
-    margin-top: 2%;
+    margin-top: 5%;
     width: 20vw;
     align-self: center;
     background-color: #25ff2c;
 }
 
 #botao:hover{
+    transition: 200ms;
     font-size: xx-large;
 }
 
