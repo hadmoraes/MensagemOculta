@@ -68,20 +68,6 @@ select{
     margin-top: 2%;
 }
 
-
-#botaoCifra{
-    font-family: 'Share Tech Mono', monospace;
-    font-size: x-large;
-    font-weight: bold;
-    background-color: #aace88;
-    margin-top: 2%;
-}
-
-#botaoCifra:active{
-    background-color: black;
-    color: #aace88;
-}
-
 #botao{
     font-family: 'Share Tech Mono', monospace;
     font-weight: bold;
