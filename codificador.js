@@ -1,10 +1,12 @@
 var cifras = document.getElementById("escolhaCifra");
-var codificar = document.querySelector('#codificar');
-var decodificar = document.querySelector('#decodificar');
+var codificar = document.getElementById('codificar');
+var decodificar = document.getElementById('decodificar');
 var campoCifra = document.querySelector('.cifraEscolha');
 var incremento = document.createElement('input');
 var incrementoLabel = document.createElement('label');
 var lineBreak = document.createElement('br');
+var btn = document.getElementById('botao');
+
 
 incremento.setAttribute('type','text');
 incremento.setAttribute('name','incremento');
@@ -21,4 +23,10 @@ cifras.addEventListener('change', function(){
     }
 });
 
+codificar.addEventListener('click',function(){
+    btn.innerText = 'Codificar Mensagem!';
+});
 
+decodificar.addEventListener('click',function(){
+    btn.innerText = 'Decodificar Mensagem!';
+});
