@@ -1,15 +1,29 @@
 body{
     margin: 0;
+    background-image: url("./imagens/matrix.gif") ;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 form{
     display: flex;
     flex-direction: column ;
-    border: 1px black solid;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
     width: 50vw;
+    height: 100vh;
     padding: 3%;
-    margin-left: 5%;
 }
+
+.title{
+    text-align: center;
+}
+
 
 .entrada{
     display: flex;
