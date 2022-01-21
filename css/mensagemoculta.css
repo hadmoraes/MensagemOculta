@@ -140,6 +140,10 @@ select{
         font-size: large;
     }
 
+    #botao:hover{
+        font-size: x-large;
+    }
+
     .resposta{
         margin-top: 15%;
         font-size: x-large;
