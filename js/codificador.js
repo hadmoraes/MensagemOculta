@@ -1,3 +1,4 @@
+var formulario = document.querySelector('form');
 var mensagem = document.getElementById('mensagem');
 var cifras = document.getElementById("escolhaCifra");
 var codificar = document.getElementById('codificar');
@@ -7,13 +8,16 @@ var incremento = document.createElement('input');
 var incrementoLabel = document.createElement('label');
 var lineBreak = document.createElement('br');
 var btn = document.getElementById('botao');
-
+var resposta = document.createElement('div');
 
 incremento.setAttribute('type','text');
 incremento.setAttribute('name','incremento');
 incremento.setAttribute('class', 'caixaEntrada');
 incrementoLabel.setAttribute('for','incremento');
+incrementoLabel.setAttribute('id', 'mensagemIncremento');
 incrementoLabel.innerText = 'Digite o incremento:';
+resposta.setAttribute('class','resposta');
+
 
 function base64(mensagem){
     if (btn.innerText == 'Codificar Mensagem!'){
@@ -34,8 +38,9 @@ decodificar.addEventListener('click',function(){
 btn.addEventListener('click', function(event){
     event.preventDefault();
     if (cifras.value == 'base64'){
-        console.log(base64(mensagem.value));
-        console.log(mensagem.value);
+        formulario.append(resposta);
+        resposta.innerText = `Sua mensagem criptografada é:
+        ${base64(mensagem.value)}`;
     }
 });
 

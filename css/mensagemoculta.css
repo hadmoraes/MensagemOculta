@@ -92,6 +92,13 @@ select{
     color: #25ff2c;
 }
 
+.resposta{
+    text-align: center;
+    font-size: xx-large;
+    color: #aace88 ;
+    margin-top: 10%;
+}
+
 @media (max-width:900px){
     form{
         width: 80vw;
@@ -131,5 +138,10 @@ select{
         margin-top: 15%;
         width: 60vw;
         font-size: large;
+    }
+
+    .resposta{
+        margin-top: 15%;
+        font-size: x-large;
     }
 }
