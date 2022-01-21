@@ -45,7 +45,7 @@ form{
     margin-bottom: 2%;
 }
 
-#mensagem{
+.caixaEntrada{
     padding: 1%;
     font-family: 'Cousine', monospace;
     font-size: large;
@@ -53,7 +53,7 @@ form{
     
 }
 
-#mensagem::selection{
+.caixaEntrada::selection{
     background-color: black ;
     color: #aace88;
 }
