@@ -1,10 +1,11 @@
 var formulario = document.querySelector('form');
-var mensagem = document.getElementById('mensagem');
+var inputUsuario = document.getElementById('mensagem');
 var cifras = document.getElementById("escolhaCifra");
 var codificar = document.getElementById('codificar');
 var decodificar = document.getElementById('decodificar');
 var campoCifra = document.querySelector('.cifraEscolha');
 var incremento = document.createElement('input');
+var incrementoNumero;
 var incrementoLabel = document.createElement('label');
 var lineBreak = document.createElement('br');
 var btn = document.getElementById('botao');
@@ -19,13 +20,42 @@ incrementoLabel.innerText = 'Digite o incremento:';
 resposta.setAttribute('class','resposta');
 
 
-function base64(mensagem){
+function executaBase64(mensagem){
     if (btn.innerText == 'Codificar Mensagem!'){
        return btoa(mensagem);
     } else {
         return atob(mensagem);
     }
 };
+
+function executaCifraCesar(mensagem,incremento){
+    if (btn.innerText == 'Codificar Mensagem!'){
+        return codificaCesar(mensagem,incremento);
+     } else {
+         return decodificaCesar(mensagem,incremento);
+     }
+}
+
+function codificaCesar(mensagem,incremento){
+    var cryptoCaracter = 0;
+    var cryptoMensagem = '';
+    for (i=0; i<mensagem.length; i++){
+        cryptoCaracter = mensagem.charCodeAt(i) + incremento;
+        cryptoMensagem += String.fromCharCode(cryptoCaracter);
+    }
+    return cryptoMensagem
+}
+
+function decodificaCesar(mensagem,incremento){
+    var decryptoCaracter = 0;
+    var decryptoMensagem = '';
+    for (i=0; i<mensagem.length; i++){
+        decryptoCaracter = mensagem.charCodeAt(i) - incremento;
+        decryptoMensagem += String.fromCharCode(decryptoCaracter);
+    }
+    return decryptoMensagem
+}
+
 
 codificar.addEventListener('click',function(){
     btn.innerText = 'Codificar Mensagem!';
@@ -35,14 +65,6 @@ decodificar.addEventListener('click',function(){
     btn.innerText = 'Decodificar Mensagem!';
 });
 
-btn.addEventListener('click', function(event){
-    event.preventDefault();
-    if (cifras.value == 'base64'){
-        formulario.append(resposta);
-        resposta.innerText = `Sua mensagem criptografada é:
-        ${base64(mensagem.value)}`;
-    }
-});
 
 
 cifras.addEventListener('change', function(){
@@ -56,5 +78,21 @@ cifras.addEventListener('change', function(){
         incremento.remove();
     }
 });
+
+btn.addEventListener('click', function(event){
+    event.preventDefault();
+    if (cifras.value == 'base64'){
+        formulario.append(resposta);
+        resposta.innerText = `Sua mensagem criptografada é:
+        ${executaBase64(inputUsuario.value)}`;
+    } else if (cifras.value == 'cesar'){
+        incrementoNumero = Number(incremento.value);
+        formulario.append(resposta);
+        resposta.innerText = `Sua mensagem criptografada é:
+        ${executaCifraCesar(inputUsuario.value, incrementoNumero)}`
+    }
+});
+
+
 
 
