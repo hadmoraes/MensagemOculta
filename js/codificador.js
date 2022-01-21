@@ -13,8 +13,8 @@ var resposta = document.createElement('div');
 incremento.setAttribute('type','text');
 incremento.setAttribute('name','incremento');
 incremento.setAttribute('class', 'caixaEntrada');
+incremento.setAttribute('id', 'mensagemIncremento');
 incrementoLabel.setAttribute('for','incremento');
-incrementoLabel.setAttribute('id', 'mensagemIncremento');
 incrementoLabel.innerText = 'Digite o incremento:';
 resposta.setAttribute('class','resposta');
 
@@ -45,12 +45,15 @@ btn.addEventListener('click', function(event){
 });
 
 
-
 cifras.addEventListener('change', function(){
     if(cifras.value == 'cesar'){
         campoCifra.append(incrementoLabel);
         campoCifra.append(lineBreak);
         campoCifra.append(incremento);
+    } else{
+        incrementoLabel.remove()
+        lineBreak.remove();
+        incremento.remove();
     }
 });
 
