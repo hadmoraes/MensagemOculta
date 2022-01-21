@@ -129,6 +129,10 @@ select{
     form{
         width: 80vw;
     }
+
+        #botao{
+        width: 60vw;
+    }
 }
 
 @media (max-width:600px){
@@ -163,7 +167,6 @@ select{
 
     #botao{
         margin-top: 15%;
-        width: 60vw;
         font-size: large;
     }
 
