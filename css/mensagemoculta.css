@@ -8,6 +8,7 @@ body{
     background-image: url("../imagens/matrix.gif") ;
 }
 
+
 main{
     display: flex;
     flex-direction: column;
@@ -27,6 +28,11 @@ form{
     padding: 3%;
 }
 
+div label::selection{
+    color: black ;
+    background-color: #aace88;
+}
+
 .title{
     text-align: center;
     font-family: 'Press Start 2P', cursive;
@@ -34,6 +40,10 @@ form{
     margin-bottom: 8%;
 }
 
+.title::selection{
+    background-color: #25ff2c;
+    color: black;
+}
 
 .entrada{
     display: flex;
@@ -71,6 +81,7 @@ select{
     margin-top: 2%;
 }
 
+
 #botao{
     font-family: 'Share Tech Mono', monospace;
     font-weight: bold;
@@ -92,11 +103,26 @@ select{
     color: #25ff2c;
 }
 
+.mensagemFinal{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.mensagemFinal::selection{
+    color: black ;
+    background-color: #aace88;
+}
+
+
 .resposta{
     text-align: center;
     font-size: xx-large;
     color: #aace88 ;
-    margin-top: 10%;
+}
+
+.resposta::selection{
+    background-color: #25ff2c;
+    color: black;
 }
 
 @media (max-width:900px){
@@ -144,8 +170,11 @@ select{
         font-size: x-large;
     }
 
-    .resposta{
+    .mensagemFinal{
         margin-top: 15%;
+    }
+
+    .resposta{
         font-size: x-large;
     }
 }

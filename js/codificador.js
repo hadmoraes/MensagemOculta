@@ -9,7 +9,8 @@ var incrementoNumero;
 var incrementoLabel = document.createElement('label');
 var lineBreak = document.createElement('br');
 var btn = document.getElementById('botao');
-var resposta = document.createElement('div');
+var mensagemFinal = document.createElement('p');
+var resposta = document.createElement('p');
 
 incremento.setAttribute('type','text');
 incremento.setAttribute('name','incremento');
@@ -18,6 +19,8 @@ incremento.setAttribute('id', 'mensagemIncremento');
 incrementoLabel.setAttribute('for','incremento');
 incrementoLabel.innerText = 'Digite o incremento:';
 resposta.setAttribute('class','resposta');
+mensagemFinal.setAttribute('class', 'mensagemFinal');
+mensagemFinal.innerText = 'Sua mensagem codificada é:';
 
 
 function executaBase64(mensagem){
@@ -59,10 +62,12 @@ function decodificaCesar(mensagem,incremento){
 
 codificar.addEventListener('click',function(){
     btn.innerText = 'Codificar Mensagem!';
+    mensagemFinal.innerText = 'Sua mensagem codificada é:';
 });
 
 decodificar.addEventListener('click',function(){
     btn.innerText = 'Decodificar Mensagem!';
+    mensagemFinal.innerText = 'Sua mensagem decodificada é:';
 });
 
 
@@ -82,14 +87,14 @@ cifras.addEventListener('change', function(){
 btn.addEventListener('click', function(event){
     event.preventDefault();
     if (cifras.value == 'base64'){
+        resposta.innerText = executaBase64(inputUsuario.value);
+        formulario.append(mensagemFinal);
         formulario.append(resposta);
-        resposta.innerText = `Sua mensagem criptografada é:
-        ${executaBase64(inputUsuario.value)}`;
     } else if (cifras.value == 'cesar'){
         incrementoNumero = Number(incremento.value);
+        resposta.innerText = executaCifraCesar(inputUsuario.value, incrementoNumero);
+        formulario.append(mensagemFinal);
         formulario.append(resposta);
-        resposta.innerText = `Sua mensagem criptografada é:
-        ${executaCifraCesar(inputUsuario.value, incrementoNumero)}`
     }
 });
 
