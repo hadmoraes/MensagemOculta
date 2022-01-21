@@ -86,7 +86,7 @@ select{
     font-family: 'Share Tech Mono', monospace;
     font-weight: bold;
     font-size: x-large;
-    text-shadow: #aace88;
+    text-align: center ;
     margin-top: 5%;
     width: 20vw;
     align-self: center;
@@ -134,7 +134,7 @@ select{
 @media (max-width:600px){
     form{
         align-items: center;
-        font-size: large;
+        font-size: medium;
         text-align: center;
     }
 
