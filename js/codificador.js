@@ -12,10 +12,10 @@ var btn = document.getElementById('botao');
 var mensagemFinal = document.createElement('p');
 var resposta = document.createElement('p');
 
-incremento.setAttribute('type','text');
+incremento.setAttribute('type','number');
+incremento.setAttribute('min','0');
 incremento.setAttribute('name','incremento');
 incremento.setAttribute('class', 'caixaEntrada');
-incremento.setAttribute('id', 'mensagemIncremento');
 incrementoLabel.setAttribute('for','incremento');
 incrementoLabel.innerText = 'Digite o incremento:';
 resposta.setAttribute('class','resposta');
