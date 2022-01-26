@@ -17,7 +17,7 @@ incremento.setAttribute('min','0');
 incremento.setAttribute('name','incremento');
 incremento.setAttribute('class', 'caixaEntrada');
 incrementoLabel.setAttribute('for','incremento');
-incrementoLabel.innerText = 'Digite o incremento:';
+incrementoLabel.innerText = 'Escolha o incremento:';
 resposta.setAttribute('class','resposta');
 mensagemFinal.setAttribute('class', 'mensagemFinal');
 mensagemFinal.innerText = 'Sua mensagem codificada é:';
