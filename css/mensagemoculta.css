@@ -118,6 +118,7 @@ select{
     text-align: center;
     font-size: xx-large;
     color: #aace88 ;
+    word-break: break-all;
 }
 
 .resposta::selection{
@@ -156,6 +157,10 @@ select{
         margin-bottom: 5%;
     }
 
+    .caixaEntrada{
+        font-size: medium;
+    }
+    
     .cifraEscolha{
         margin-bottom: 10%;
     }
@@ -176,9 +181,10 @@ select{
 
     .mensagemFinal{
         margin-top: 15%;
+        margin-bottom: 5%;
     }
 
     .resposta{
-        font-size: x-large;
+        font-size: large;
     }
 }
