@@ -3,7 +3,7 @@
 
 > ## Sobre
 
-  Neste projeto foi desenvolvido uma aplicação capaz de codificar e decodificar mensagens utilizando cifra de César e Base64.
+  Neste projeto foi desenvolvida uma aplicação capaz de codificar e decodificar mensagens utilizando cifra de César e Base64.
 
 > ## Pré-requisitos
 
