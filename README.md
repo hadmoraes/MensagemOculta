@@ -3,11 +3,11 @@
 
 > ## Sobre
 
-  Neste projeto você deverá desenvolver uma aplicação capaz de codificar e decodificar mensagens utilizando cifra de César e Base64.
+  Neste projeto foi desenvolvido uma aplicação capaz de codificar e decodificar mensagens utilizando cifra de César e Base64.
 
 > ## Pré-requisitos
 
-  - Um campo de entrada textual, da mensagem que será codificada ou decodificada;
+  - Um campo de entrada textual para a mensagem que será codificada ou decodificada;
   - Um campo de seleção, com as opções "cifra de césar" e "base64";
   - Com "cifra de césar" ativo na seleção, um novo campo deve surgir no formulário para que seja possível fornecer o incremento utilizado na cifra;
   - Dois campos radiais (radio buttons) com os textos: "codificar" e "decodificar";
@@ -25,7 +25,7 @@
   - Git
 
 
-> ## Habilidades Utilizadas
+> ## Habilidades Desenvolvidas
 
   - Indentação do código
   - Tags semânticas (HTML)
