@@ -48,7 +48,7 @@
 
 > ## Site
 
-  Acesse o projeto clicando <a href="https://hadmoraes.github.io/ProjetoMensagemOculta/">aqui</a>
+  Acesse o projeto clicando <a href="https://hadmoraes.github.io/MensagemOculta/">aqui</a>
 
 <div align="center">
   &#129145;&nbsp;<a href="#inicio"><strong>Voltar ao topo</strong></a>&nbsp;&#129145;
